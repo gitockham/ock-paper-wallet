@@ -260,6 +260,7 @@ app.directive('wallet', ($rootScope, $timeout, wallet) => {
             var link = document.createElement('a');
             link.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
             link.download = 'ark-paperwallet.jpg';
+         // link.download = 'ock-paperwallet.jpg';
             link.click();
           }
         });

@@ -3,6 +3,7 @@ import crypto from 'crypto'
 
 import bip39 from 'bip39'
 import arkjs from 'arkjs'
+// import ockjs from 'ockjs'
 
 angular.module('wallet', [])
   .factory('wallet', () => {
@@ -15,6 +16,8 @@ angular.module('wallet', [])
 
         let networks = arkjs.networks
         let ecpair = arkjs.ECPair.fromSeed(passphrase, networks.ark)
+     // let networks = ockjs.networks
+     // let ecpair = ockjs.ECPair.fromSeed(passphrase, networks.ock)
 
         let publicKey = ecpair.getPublicKeyBuffer().toString('hex')
         let address = ecpair.getAddress().toString('hex')
